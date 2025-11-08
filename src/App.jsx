@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import Bio from './components/Bio';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <main className="pt-16">
         <Hero />
+        <Bio />
         <Projects />
         <Skills />
         <Contact />
