@@ -6,9 +6,11 @@ import Projects from './components/Projects.jsx';
 
 function App() {
   const getInitialTheme = () => {
-    const stored = localStorage.getItem('theme');
-    if (stored === 'light' || stored === 'dark') return stored;
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    try {
+      const stored = localStorage.getItem('theme');
+      if (stored === 'light' || stored === 'dark') return stored;
+    } catch {}
+    const prefersDark = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     return prefersDark ? 'dark' : 'light';
   };
 
@@ -21,12 +23,13 @@ function App() {
     } else {
       root.classList.remove('dark');
     }
-    localStorage.setItem('theme', theme);
+    try {
+      localStorage.setItem('theme', theme);
+    } catch {}
   }, [theme]);
 
   const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
 
-  // Accent palette restricted to light blue hues
   const palette = useMemo(
     () => ({
       primary: 'sky',
@@ -36,7 +39,7 @@ function App() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-white dark:from-slate-950 dark:via-slate-925 dark:to-slate-900 text-slate-900 dark:text-slate-100">
+    <div className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-900 text-slate-900 dark:text-slate-100">
       <Navbar theme={theme} onToggleTheme={toggleTheme} palette={palette} />
       <main>
         <Hero palette={palette} />
