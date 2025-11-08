@@ -1,13 +1,19 @@
+import React from 'react';
+
 export default function Bio() {
   return (
-    <section id="about" className="relative w-full py-20">
-      <div className="mx-auto max-w-3xl px-6">
-        <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-900 dark:text-white">About</h2>
-        <p className="mt-4 text-base leading-7 text-neutral-700 dark:text-neutral-300">
-          Android & Mobile Engineer with 1.5+ years of experience building high-impact apps across fintech, healthtech, and ERP domains. I7ve delivered end-to-end features from system design to production deployment within Agile, sprint-based teamsimproving app quality, performance, and user experience while coordinating with cross-functional stakeholders. I7m a National SIH Winner with hands-on expertise in the Android and Flutter ecosystems, complemented by backend integration experience.
+    <section id="about" className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50">
+      <div className="max-w-4xl mx-auto px-4">
+        <h2 className="text-2xl md:text-3xl font-semibold text-blue-900">About</h2>
+        <p className="mt-6 text-blue-900/80 leading-relaxed">
+          I’m an Android developer with a strong grasp of Kotlin and Jetpack, comfortable shipping
+          end-to-end features from UI flows to backend integrations. On the server side, I work with
+          Java and Python to build clean, well-structured services and APIs.
         </p>
-        <p className="mt-4 text-base leading-7 text-neutral-700 dark:text-neutral-300">
-          Beyond mobile, I design and implement reliable backend services and automation using Java and Python, with strong foundations in algorithms and systems programming (including C++). My focus is on building scalable, measurable, real-world solutionsfrom resilient APIs and data flows to seamless mobile integrationsthat are fast, maintainable, and production-ready.
+        <p className="mt-4 text-blue-900/80 leading-relaxed">
+          Recently, I’ve been exploring AI agents and automation — wiring LLM tooling into
+          developer workflows to speed up delivery and improve reliability. I value simple
+          architectures, sharp UX, and measurable outcomes.
         </p>
       </div>
     </section>

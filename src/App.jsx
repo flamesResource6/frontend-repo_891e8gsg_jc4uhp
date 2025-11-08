@@ -1,26 +1,21 @@
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
 import Bio from './components/Bio';
+import Projects from './components/Projects';
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-50">
+    <div className="min-h-screen bg-white text-blue-900">
       <Navbar />
-      <main className="pt-16">
+      <main>
         <Hero />
         <Bio />
         <Projects />
-        <Skills />
-        <Contact />
       </main>
-      <footer className="border-t border-neutral-200/60 dark:border-neutral-800 py-8 text-center text-sm text-neutral-500">
-        © {new Date().getFullYear()} Aarav Kumar · Android · Backend · AI Agents
+      <footer className="py-8 border-t border-blue-100 text-center text-sm text-blue-900/70 bg-white">
+        © {new Date().getFullYear()} Built with care — Android • Backend • AI
       </footer>
     </div>
   );
 }
-
-export default App;
