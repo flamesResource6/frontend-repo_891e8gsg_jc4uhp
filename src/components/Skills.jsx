@@ -1,9 +1,9 @@
-import { Android, Database, Brain, Server } from 'lucide-react';
+import { Smartphone, Database, Brain, Server } from 'lucide-react';
 
 export default function Skills() {
   const skills = [
     {
-      icon: <Android className="h-5 w-5" />, title: 'Android',
+      icon: <Smartphone className="h-5 w-5" />, title: 'Android',
       items: ['Kotlin', 'Jetpack Compose', 'KMP', 'CI/CD', 'Material 3']
     },
     {
