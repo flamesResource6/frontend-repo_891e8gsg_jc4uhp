@@ -3,6 +3,8 @@ import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import Bio from './components/Bio.jsx';
 import Projects from './components/Projects.jsx';
+import Skills from './components/Skills.jsx';
+import Contact from './components/Contact.jsx';
 
 function App() {
   const getInitialTheme = () => {
@@ -44,8 +46,15 @@ function App() {
       <main>
         <Hero palette={palette} />
         <Bio palette={palette} />
+        <Skills />
         <Projects palette={palette} />
+        <Contact />
       </main>
+      <footer className="py-10 text-center text-sm text-slate-600 dark:text-slate-400">
+        <p>
+          © {new Date().getFullYear()} • Built with React & Tailwind. Blue-only theme (sky/cyan) with light/dark toggle.
+        </p>
+      </footer>
     </div>
   );
 }
